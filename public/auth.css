@@ -1,0 +1,264 @@
+/* ================================
+   auth.css — Login & Signup Styles
+   Blood Management System
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #8B0000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Main card ── */
+.container {
+    display: flex;
+    background: #C0192C;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    width: 720px;
+    min-height: 400px;
+}
+
+/* Signup card is wider */
+.signup-page .container {
+    width: 850px;
+}
+
+/* ── Left red panel ── */
+.left-panel {
+    flex: 0 0 40%;
+    background: #B71C2C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative blobs */
+.left-panel::before {
+    content: '';
+    position: absolute;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    top: -50px; left: -50px;
+}
+.left-panel::after {
+    content: '';
+    position: absolute;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    bottom: -35px; right: -35px;
+}
+
+.left-panel h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.left-panel .blood-icon {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 18px;
+}
+
+.left-panel p {
+    font-size: 0.80rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* ── Right panel ── */
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 20px;
+}
+
+/* ── Form box ── */
+.form-box {
+    background: #F5DEDE;
+    border-radius: 14px;
+    padding: 28px 24px 20px;
+    width: 100%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+.form-box h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #3A0000;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.signup-page .form-box h2 {
+    text-align: left;
+    font-size: 1.15rem;
+}
+
+/* ── Error / Success ── */
+.error-msg {
+    background: #ffdddd;
+    color: #8B0000;
+    border: 1px solid #C0192C;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 0.74rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.success-msg {
+    background: #ddffd8;
+    color: #1a5e00;
+    border: 1px solid #4CAF50;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 0.74rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* ── Labels ── */
+.form-box label {
+    display: block;
+    font-size: 0.70rem;
+    font-weight: 600;
+    color: #5A1A1A;
+    margin-bottom: 3px;
+}
+
+/* ── Inputs & selects ── */
+.form-box input[type="text"],
+.form-box input[type="password"],
+.form-box input[type="number"],
+.form-box select {
+    width: 100%;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1.5px solid transparent;
+    border-radius: 6px;
+    font-size: 0.80rem;
+    color: #3A0000;
+    outline: none;
+    margin-bottom: 11px;
+    transition: border-color 0.2s;
+}
+.form-box input:focus,
+.form-box select:focus {
+    border-color: #C0192C;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background: #5A1A1A;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 12px;
+}
+.btn-primary:hover { background: #3A0000; }
+
+.btn-outline {
+    padding: 9px 20px;
+    background: #fff;
+    color: #5A1A1A;
+    border: 1.5px solid #5A1A1A;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-outline:hover { background: #5A1A1A; color: #fff; }
+
+/* ── Login page extras ── */
+.login-page .form-box { max-width: 290px; }
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    font-size: 0.70rem;
+    color: #8B0000;
+    text-decoration: none;
+    margin-top: -6px;
+    margin-bottom: 14px;
+}
+.forgot-link:hover { text-decoration: underline; }
+
+.divider {
+    border: none;
+    border-top: 1px solid #D5AAAA;
+    margin: 12px 0;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 0.70rem;
+    color: #5A1A1A;
+    margin-bottom: 9px;
+}
+
+/* ── Signup page extras ── */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 14px;
+}
+.form-grid .full-col { grid-column: 1 / -1; }
+.form-grid input,
+.form-grid select  { margin-bottom: 8px; }
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    align-items: center;
+}
+.btn-row .btn-primary { flex: 1; margin-bottom: 0; }
+
+/* ── Copyright ── */
+.copyright {
+    text-align: center;
+    font-size: 0.58rem;
+    color: #9A4444;
+    margin-top: 12px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 620px) {
+    .container, .signup-page .container {
+        flex-direction: column;
+        width: 95%;
+    }
+    .left-panel { min-height: 170px; }
+    .form-grid  { grid-template-columns: 1fr; }
+    .full-col   { grid-column: 1 / -1; }
+}

@@ -6,13 +6,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Blood Donation System</title>
+    <link rel="stylesheet" href="/BloodDonationManagementSystem/assets/style.css">
 </head>
-
 <body>
-
     <div>
         <a href="/BloodDonationManagementSystem/index.php">Home</a> |
         <a href="/BloodDonationManagementSystem/public/login.php">Login</a> |
