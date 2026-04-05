@@ -1,0 +1,44 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+/* Header section */
+h1 {
+  background: #c62828; /* deep red */
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+p {
+  margin: 20px;
+  font-size: 18px;
+}
+
+/* Buttons */
+button {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #b71c1c;
+}
+
+/* Links wrapping buttons */
+a {
+  text-decoration: none;
+}
